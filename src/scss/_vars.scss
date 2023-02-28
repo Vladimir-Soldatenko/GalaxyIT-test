@@ -5,6 +5,7 @@ $containerPadding: 40;
 $containerSidePadding: math.div($containerPadding, 2);
 $breakpoint1450: 1449.98 + px;
 $breakpoint1240: 1239.98 + px;
+$breakpoint1024: 1023.98 + px;
 $breakpoint992: 991.98 + px;
 $breakpoint768: 767.98 + px;
 $breakpoint480: 479.98 + px;
@@ -13,7 +14,7 @@ $breakpoint480: 479.98 + px;
 $mainColor: #0f0f0f;
 
 // Burger Menu
-$burgerBreakpoint: $breakpoint992;
+$burgerBreakpoint: $breakpoint1024;
 $burgerColor: "black";
 $burgerActiveColor: "white";
 

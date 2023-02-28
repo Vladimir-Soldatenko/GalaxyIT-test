@@ -1,0 +1,192 @@
+.products {
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 63px;
+    @media (max-width: 2135px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: $breakpoint1450) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: $breakpoint768) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__item {
+      display: flex;
+      flex-direction: column;
+      width: 374px;
+      margin-bottom: 99px;
+      @media (max-width: $breakpoint1024) {
+        width: 250px;
+      }
+      @media (max-width: $breakpoint768) {
+        margin-bottom: 30px;
+      }
+      &__photo {
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 0;
+          height: 0;
+          border-top: 63px solid #000;
+          border-right: 63px solid transparent;
+        }
+        @media (max-width: $breakpoint1024) {
+          width: 250px;
+        }
+        &__img {
+          @media (max-width: $breakpoint1024) {
+            width: 100%;
+          }
+        }
+      }
+      &__new {
+        position: absolute;
+        top: 14px;
+        left: 9px;
+        transform: rotate(-45deg);
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        color: #fff;
+        z-index: 1;
+        text-transform: uppercase;
+      }
+      &__text {
+        display: flex;
+        flex-direction: column;
+        &__info {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-top: 13px;
+          &__stars {
+            display: flex;
+            align-items: center;
+            &__svg {
+              width: 26px;
+              height: 26px;
+              margin-right: 5px;
+              &:last-of-type {
+                margin-right: 0;
+              }
+              use {
+                width: 18px;
+                height: 18px;
+              }
+            }
+          }
+          &__sizes {
+            display: flex;
+            align-items: center;
+            &__name {
+              margin-right: 15px;
+              font-weight: 400;
+              font-size: 22px;
+              line-height: 27px;
+              color: #cecece;
+              @media (max-width: $breakpoint992) {
+                font-size: 16px;
+              }
+              @media (max-width: $breakpoint768) {
+                font-size: 14px;
+              }
+              &:last-of-type {
+                margin-right: 0;
+              }
+            }
+          }
+        }
+        &__name {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 20px;
+          margin: 17px 0 25px 0;
+          @media (max-width: $breakpoint992) {
+            font-size: 14px;
+          }
+          @media (max-width: $breakpoint768) {
+            font-size: 12px;
+          }
+        }
+        &__price {
+          font-weight: 700;
+          font-size: 30px;
+          line-height: 37px;
+          @media (max-width: $breakpoint992) {
+            font-size: 20px;
+          }
+          @media (max-width: $breakpoint768) {
+            font-size: 17px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.tabs {
+  width: 100%;
+  margin-top: 150px;
+  @media (max-width: $breakpoint992) {
+    margin-top: 30px;
+  }
+  &__header {
+    display: flex;
+    justify-content: center;
+    @media (max-width: 768px) {
+      flex-wrap: wrap;
+    }
+    &-item {
+      position: relative;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 22px;
+      padding: 0 15px;
+      margin-right: 138px;
+      color: #878787;
+      cursor: pointer;
+      @media (max-width: $breakpoint1024) {
+        font-size: 15px;
+        margin-right: 70px;
+      }
+      @media (max-width: $breakpoint768) {
+        margin-right: 30px;
+      }
+      &:last-of-type {
+        margin-right: 0;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -23px;
+        left: 0;
+        width: 0px;
+        height: 6px;
+        transition: all 0.3s;
+        background: #0f0f0f;
+      }
+      &.active {
+        color: #000000;
+        &::after {
+          content: "";
+          width: 100%;
+        }
+      }
+    }
+  }
+  &__content {
+    margin-top: 132px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: $breakpoint992) {
+      margin-top: 60px;
+    }
+  }
+}
