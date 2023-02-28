@@ -1,0 +1,58 @@
+// Header
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-height: 135px;
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__item {
+      margin-right: 26px;
+      &:last-of-type {
+        margin-right: 35px;
+      }
+      &:first-of-type::after {
+        content: url("../img/header_arrow.svg");
+        margin-left: 7px;
+      }
+      &-link {
+        font-size: 14px;
+        font-weight: 700;
+        color: $mainColor;
+        @media (max-width: $breakpoint1240) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  &__logo {
+    padding-top: 33px;
+    flex: 1 1 auto;
+    &__link {
+      &__svg {
+        width: 122px;
+        height: 104px;
+      }
+    }
+  }
+  &__icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-link {
+      margin-right: 73px;
+      @media (max-width: $breakpoint1240) {
+        margin-right: 20px;
+      }
+      &:last-of-type {
+        margin-right: 0;
+      }
+      &-svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
