@@ -71,6 +71,36 @@ function fixedNav() {
 }
 window.addEventListener("scroll", fixedNav);
 
+// Модальное окно
+function bindModal(trigger, modal, close) {
+  (trigger = document.querySelector(trigger)),
+    (modal = document.querySelector(modal)),
+    (close = document.querySelector(close));
+
+  const body = document.body;
+
+  trigger.addEventListener("click", (e) => {
+    e.preventDefault();
+    modal.style.display = "flex";
+    body.classList.add("locked");
+  });
+  close.addEventListener("click", () => {
+    modal.style.display = "none";
+    body.classList.remove("locked");
+  });
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+      body.classList.remove("locked");
+    }
+  });
+}
+
+// ПЕРВЫЙ аргумент - класс кнопки, при клике на которую будет открываться модальное окно.
+// ВТОРОЙ аргумент - класс самого модального окна.
+// ТРЕТИЙ аргумент - класс кнопки, при клике на которую будет закрываться модальное окно.
+bindModal(".modal__btn", ".modal__wrapper", ".modal__close");
+
 function tabs(
   headerSelector,
   tabSelector,
@@ -116,6 +146,66 @@ function tabs(
 // ТРЕТИЙ аргумент - класс того блока, который будет переключаться.
 // ЧЕТВЕРТЫЙ аргумент - класс активности, который будет добавлятся для таба, который сейчас активен.
 tabs(".tabs__header", ".tabs__header-item", ".tabs__content-item", "active");
+tabs(".modal__tabs__header", ".modal__body__link", ".modal__content", "active");
+
+const formInputs = document.querySelectorAll(".modal__form__login__input");
+const form = document.querySelector(".login__form");
+
+form.addEventListener("submit", submitForm);
+
+const data = {
+  email: "",
+  password: "",
+};
+
+function setData(data, inputs) {
+  inputs.forEach((input) => {
+    input.addEventListener("change", (e) => {
+      data[e.target.name] = e.target.value.trim();
+    });
+  });
+}
+
+function validate(data) {
+  const errors = {};
+  if (!data.email) errors.email = "*некорректно введенные данные";
+  if (!data.password) errors.password = "*некорректно введенные данные";
+
+  return errors;
+}
+
+function submitForm(e) {
+  e.preventDefault();
+  setData(data, formInputs);
+  let errors = validate(data);
+
+  if (Object.keys(errors).length === 0) {
+    console.log(data);
+    form.reset();
+    errors = {};
+    return;
+  }
+  addError(formInputs, errors);
+}
+
+function addError(inputs, errors) {
+  inputs.forEach((i) => {
+    if (errors[i.name]) {
+      i.classList.add("error__input");
+      i.nextElementSibling.classList.add("error");
+      i.nextElementSibling.textContent = errors[i.name];
+      i.onfocus = () => {
+        i.classList.remove("error__input");
+        i.nextElementSibling.classList.remove("error");
+        i.nextElementSibling.innerHTML = "";
+      };
+      return;
+    }
+    i.classList.remove("error__input");
+    i.nextElementSibling.classList.remove("error");
+    i.nextElementSibling.innerHTML = "";
+  });
+}
 
 // Custom scripts
 

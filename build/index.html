@@ -73,7 +73,7 @@
               <use xlink:href="./img/sprite.svg#shop"></use>
             </svg>
           </a>
-          <a href="#" class="navbar__icons-link">
+          <a href="#" class="navbar__icons-link modal__btn">
             <svg class="navbar__icons-link-svg">
               <use xlink:href="./img/sprite.svg#login"></use>
             </svg>
@@ -86,6 +86,111 @@
     </div>
   </nav>
 </header>
+
+
+    <!-- modal -->
+    <!-- Modal -->
+<div class="modal__wrapper">
+  <div class="modal">
+    <div class="modal__close">
+      <svg class="modal__close__svg">
+        <use xlink:href="./img/sprite.svg#close"></use>
+      </svg>
+    </div>
+    <div class="modal__title"><span></span></div>
+    <div class="modal__body">
+      <div class="modal__tabs">
+        <div class="modal__tabs__header">
+          <div class="active modal__body__link">ЛОГИН</div>
+          <div class="modal__body__link">РЕГИСТРАЦИЯ</div>
+        </div>
+        <div class="modal__container">
+          <div class="modal__content">
+            <form class="modal__form__login login__form">
+              <input
+                class="modal__form__login__input form__input"
+                type="text"
+                name="email"
+                placeholder="Введите email"
+              />
+              <span class="error"></span>
+              <input
+                class="modal__form__login__input form__input"
+                type="password"
+                name="password"
+                placeholder="Введите пароль"
+              />
+              <span class="error"></span>
+              <button
+                class="modal__form__login__button form__btn"
+                type="submit"
+              >
+                Войти
+              </button>
+              <a href="#" class="modal__form__login__forgot form__forgot__pass"
+                >Забыли пароль?</a
+              >
+            </form>
+          </div>
+          <div class="modal__container">
+            <div class="modal__content">
+              <form class="modal__form__register">
+                <input
+                  class="modal__form__register__input form__input"
+                  type="text"
+                  name="username"
+                  placeholder="Введите имя"
+                />
+                <span class="error"></span>
+                <input
+                  class="modal__form__register__input form__input"
+                  type="text"
+                  name="city"
+                  placeholder="Введите город"
+                />
+                <span class="error"></span>
+                <input
+                  class="modal__form__register__input form__input"
+                  type="tel"
+                  name="phone"
+                  placeholder="Введите телефон"
+                />
+                <span class="error"></span>
+                <input
+                  class="modal__form__register__input form__input"
+                  type="text"
+                  name="email"
+                  placeholder="Введите email"
+                />
+                <span class="error"></span>
+                <input
+                  class="modal__form__register__input form__input"
+                  type="password"
+                  name="password"
+                  placeholder="Введите пароль"
+                />
+                <span class="error"></span>
+                <input
+                  class="modal__form__register__input form__input"
+                  type="password"
+                  name="confirmPassword"
+                  placeholder="Подтвердите пароль"
+                />
+                <span class="error"></span>
+                <button
+                  class="modal__form__register__button form__btn"
+                  type="submit"
+                >
+                  ЗАРЕГИСТРИРОВАТЬСЯ
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
     <!-- Main Page -->
@@ -145,7 +250,7 @@
     <div class="promotions__card">
       <div class="promotions__card__img">
         <img
-          src="../img/promotion-1.jpg"
+          src="./img/promotion-1.jpg"
           alt="photo"
           class="promotions__card__img__photo"
         />
@@ -162,7 +267,7 @@
     <div class="promotions__card">
       <div class="promotions__card__img">
         <img
-          src="../img/promotion-2.jpg"
+          src="./img/promotion-2.jpg"
           alt="photo"
           class="promotions__card__img__photo"
         />
@@ -179,7 +284,7 @@
     <div class="promotions__card">
       <div class="promotions__card__img">
         <img
-          src="../img/promotion-3.jpg"
+          src="./img/promotion-3.jpg"
           alt="photo"
           class="promotions__card__img__photo"
         />

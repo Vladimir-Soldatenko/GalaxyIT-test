@@ -46,6 +46,52 @@ body {
   }
 }
 
+.form__input {
+  width: 375px;
+  height: 70px;
+  outline: none;
+  border-bottom: 3px solid #0f0f0f;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #0f0f0f;
+  &::placeholder {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #0f0f0f;
+    letter-spacing: 0.07em;
+    font-family: $fontMain;
+  }
+}
+
+.form__btn {
+  padding: 24px 150px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 0.07em;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #0f0f0f;
+}
+
+.error {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.07em;
+  color: #d00000;
+}
+
+.error__input {
+  border-bottom: 3px solid #d00000;
+  &::placeholder {
+    color: #d00000;
+  }
+}
+
 // Animations
 // Fade
 @keyframes fade {

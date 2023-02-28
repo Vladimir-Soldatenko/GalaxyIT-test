@@ -43,3 +43,4 @@ function tabs(
 // ТРЕТИЙ аргумент - класс того блока, который будет переключаться.
 // ЧЕТВЕРТЫЙ аргумент - класс активности, который будет добавлятся для таба, который сейчас активен.
 tabs(".tabs__header", ".tabs__header-item", ".tabs__content-item", "active");
+tabs(".modal__tabs__header", ".modal__body__link", ".modal__content", "active");

@@ -93,6 +93,106 @@ body.locked {
   background-color: transparent;
 }
 
+.form__input {
+  width: 375px;
+  height: 70px;
+  outline: none;
+  border-bottom: 3px solid #0f0f0f;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #0f0f0f;
+}
+
+.form__input::-webkit-input-placeholder {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #0f0f0f;
+  letter-spacing: 0.07em;
+  font-family: "Montserrat", sans-serif;
+}
+
+.form__input::-moz-placeholder {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #0f0f0f;
+  letter-spacing: 0.07em;
+  font-family: "Montserrat", sans-serif;
+}
+
+.form__input:-ms-input-placeholder {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #0f0f0f;
+  letter-spacing: 0.07em;
+  font-family: "Montserrat", sans-serif;
+}
+
+.form__input::-ms-input-placeholder {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #0f0f0f;
+  letter-spacing: 0.07em;
+  font-family: "Montserrat", sans-serif;
+}
+
+.form__input::placeholder {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #0f0f0f;
+  letter-spacing: 0.07em;
+  font-family: "Montserrat", sans-serif;
+}
+
+.form__btn {
+  padding: 24px 150px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 0.07em;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #0f0f0f;
+}
+
+.error {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.07em;
+  color: #d00000;
+}
+
+.error__input {
+  border-bottom: 3px solid #d00000;
+}
+
+.error__input::-webkit-input-placeholder {
+  color: #d00000;
+}
+
+.error__input::-moz-placeholder {
+  color: #d00000;
+}
+
+.error__input:-ms-input-placeholder {
+  color: #d00000;
+}
+
+.error__input::-ms-input-placeholder {
+  color: #d00000;
+}
+
+.error__input::placeholder {
+  color: #d00000;
+}
+
 @-webkit-keyframes fade {
   0% {
     opacity: 0;
@@ -500,6 +600,137 @@ body.locked {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.modal__wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 2;
+}
+
+.modal__wrapper .modal {
+  background: white;
+  padding: 46px 44px 31px 44px;
+  width: 700px;
+  border: 3px solid #0f0f0f;
+  position: relative;
+}
+
+.modal__wrapper .modal__title {
+  text-align: center;
+}
+
+.modal__wrapper .modal__close {
+  cursor: pointer;
+}
+
+.modal__wrapper .modal__close__svg {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: -22px;
+  right: -22px;
+}
+
+.modal__wrapper .modal__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 30px;
+}
+
+.modal__wrapper .modal__tabs__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.modal__wrapper .modal__body__link {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  background-color: transparent;
+  padding: 25px 67px;
+  border: 3px solid #0f0f0f;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.modal__wrapper .modal__body__link:first-of-type {
+  padding: 25px 108px;
+}
+
+.modal__wrapper .modal__body__link.active {
+  background-color: #0f0f0f;
+  color: #fff;
+}
+
+.modal__wrapper .modal__form__login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal__wrapper .modal__form__login__button {
+  margin-top: 47px;
+}
+
+.modal__wrapper .modal__form__login__forgot {
+  margin-top: 17px;
+  color: #878787;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.modal__wrapper .modal__form__register {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 376px;
+}
+
+.modal__wrapper .modal__form__register__input:last-of-type {
+  margin-bottom: 54px;
+}
+
+.modal__wrapper .modal__form__register__button {
+  padding: 23px 45px;
 }
 
 @media (max-width: 2135px) {

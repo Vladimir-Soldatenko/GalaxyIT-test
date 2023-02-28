@@ -1,9 +1,102 @@
 <!-- Modal -->
 <div class="modal__wrapper">
-    <div class="modal">
-        <div class="modal__close"> <img src="./img/cancel.svg" alt="cancel" width="10px" height="10px"></div>
-        <div class="modal__title"><span>Заголовок 2</span> </div>
-        <div class="modal__body">
-        </div>
+  <div class="modal">
+    <div class="modal__close">
+      <svg class="modal__close__svg">
+        <use xlink:href="./img/sprite.svg#close"></use>
+      </svg>
     </div>
+    <div class="modal__title"><span></span></div>
+    <div class="modal__body">
+      <div class="modal__tabs">
+        <div class="modal__tabs__header">
+          <div class="active modal__body__link">ЛОГИН</div>
+          <div class="modal__body__link">РЕГИСТРАЦИЯ</div>
+        </div>
+        <div class="modal__container">
+          <div class="modal__content">
+            <form class="modal__form__login login__form">
+              <input
+                class="modal__form__login__input form__input"
+                type="text"
+                name="email"
+                placeholder="Введите email"
+              />
+              <span class="error"></span>
+              <input
+                class="modal__form__login__input form__input"
+                type="password"
+                name="password"
+                placeholder="Введите пароль"
+              />
+              <span class="error"></span>
+              <button
+                class="modal__form__login__button form__btn"
+                type="submit"
+              >
+                Войти
+              </button>
+              <a href="#" class="modal__form__login__forgot form__forgot__pass"
+                >Забыли пароль?</a
+              >
+            </form>
+          </div>
+          <div class="modal__container">
+            <div class="modal__content">
+              <form class="modal__form__register">
+                <input
+                  class="modal__form__register__input form__input"
+                  type="text"
+                  name="username"
+                  placeholder="Введите имя"
+                />
+                <span class="error"></span>
+                <input
+                  class="modal__form__register__input form__input"
+                  type="text"
+                  name="city"
+                  placeholder="Введите город"
+                />
+                <span class="error"></span>
+                <input
+                  class="modal__form__register__input form__input"
+                  type="tel"
+                  name="phone"
+                  placeholder="Введите телефон"
+                />
+                <span class="error"></span>
+                <input
+                  class="modal__form__register__input form__input"
+                  type="text"
+                  name="email"
+                  placeholder="Введите email"
+                />
+                <span class="error"></span>
+                <input
+                  class="modal__form__register__input form__input"
+                  type="password"
+                  name="password"
+                  placeholder="Введите пароль"
+                />
+                <span class="error"></span>
+                <input
+                  class="modal__form__register__input form__input"
+                  type="password"
+                  name="confirmPassword"
+                  placeholder="Подтвердите пароль"
+                />
+                <span class="error"></span>
+                <button
+                  class="modal__form__register__button form__btn"
+                  type="submit"
+                >
+                  ЗАРЕГИСТРИРОВАТЬСЯ
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
