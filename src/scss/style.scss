@@ -2,7 +2,6 @@
 @import "./vars";
 @import "./reset";
 @import "./global";
-// @import "./libs/swiper ";
 
 // Sections or Pages SCSS-files imports
 @import "./header";
@@ -13,4 +12,4 @@
 // @import './footer';
 
 // Libs
-// @import './libs/swiper';
+@import "./libs/swiper";

@@ -1,15 +1,12 @@
 const swiper = new Swiper(".men__collections__slider", {
-  // Optional parameters
   direction: "vertical",
-  // freeMode: true,
-  slidesPerView: 1,
-  // If we need pagination
-  // pagination: {
-  //   el: ".swiper-pagination",
-  // },
-  // Navigation arrows
-  //   navigation: {
-  //     nextEl: ".swiper-button-next",
-  //     prevEl: ".swiper-button-prev",
-  //   },
+
+  pagination: {
+    clickable: true,
+    // dynamicBullets: true,
+    renderBullet: function (index, className) {
+      return `<span class="${className}">0${index + 1}</span>`;
+    },
+    el: ".swiper-pagination",
+  },
 });
