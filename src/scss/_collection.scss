@@ -137,9 +137,9 @@
   @media (max-width: 1565px) {
     height: 850px;
   }
-  @media (max-width: $breakpoint1450) {
-    height: 700px;
-  }
+  // @media (max-width: $breakpoint1450) {
+  // height: 700px;
+  // }
   @media (max-width: $breakpoint1024) {
     height: 570px;
   }

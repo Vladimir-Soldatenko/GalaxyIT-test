@@ -214,6 +214,7 @@ body.locked {
 }
 
 .navbar {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -224,6 +225,7 @@ body.locked {
       -ms-flex-pack: justify;
           justify-content: space-between;
   max-height: 135px;
+  z-index: 10;
 }
 
 .navbar .menu {
@@ -1670,10 +1672,6 @@ button.swiper-pagination-bullet {
 
   .swiper {
     top: 0;
-  }
-
-  .men__collections__slider .swiper-wrapper {
-    height: 700px;
   }
 
   .men__collections__slider .swiper-pagination-bullet {

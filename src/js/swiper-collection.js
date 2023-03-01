@@ -1,6 +1,9 @@
 const swiper = new Swiper(".men__collections__slider", {
   direction: "vertical",
-
+  autoplay: {
+    delay: 3000,
+  },
+  loop: true,
   pagination: {
     clickable: true,
     // dynamicBullets: true,
