@@ -10,13 +10,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2;
+  z-index: 50;
   display: none;
 
   .modal {
     background: white;
     padding: 46px 44px 31px 44px;
-    // height: 482px;
     width: 700px;
     border: 3px solid #0f0f0f;
     position: relative;
@@ -95,15 +94,3 @@
     }
   }
 }
-
-// ************************ Кнопка вызова модального окна ************************ //
-// .modal__btn {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     border: 1px solid black;
-//     border-radius: 30px;
-//     height: 50px;
-//     width: 150px;
-//     cursor: pointer;
-// }

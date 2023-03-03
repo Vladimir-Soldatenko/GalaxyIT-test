@@ -1,4 +1,7 @@
 // Header
+header .container {
+  position: relative;
+}
 .navbar {
   position: relative;
   display: flex;
@@ -10,11 +13,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     @media screen and (max-width: $burgerBreakpoint) {
       display: none;
     }
     &__item {
       margin-right: 26px;
+
       &:last-of-type {
         margin-right: 35px;
       }
@@ -26,6 +31,10 @@
         font-size: 14px;
         font-weight: 700;
         color: $mainColor;
+        transition: all 0.3s;
+        &:hover {
+          color: $hoverColor;
+        }
         @media (max-width: $breakpoint1240) {
           font-size: 12px;
         }
@@ -57,6 +66,12 @@
       &-svg {
         width: 30px;
         height: 30px;
+        fill: #0f0f0f;
+        transition: all 0.3s;
+
+        &:hover {
+          fill: $hoverColor;
+        }
       }
     }
   }
@@ -167,3 +182,100 @@
     color: #fff !important;
   }
 }
+
+// catalog
+
+.header__catalog {
+  position: relative;
+  top: -135px;
+  z-index: 20;
+  flex-direction: column;
+  background-color: #fff;
+  // animation: fade 0.3s;
+  display: none;
+  &__close {
+    padding: 47px 62px 47px 36px;
+    background-color: rgb(15, 15, 15, 0.5);
+    color: #fff;
+    position: relative;
+    margin: 0 0 48px 55px;
+    width: 195px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.07em;
+    cursor: pointer;
+    &::after {
+      content: url("../img/arrowUp.svg");
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 25px;
+      color: #fff;
+    }
+  }
+  &__categ {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1020px;
+    &__btn {
+      padding: 17px 57px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 0.07em;
+    }
+  }
+  .border {
+    width: 100%;
+    background-color: #878787;
+    height: 1px;
+    margin: 41px 0 31px 0;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 860px;
+  }
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    &__title {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 29px;
+      color: #000000;
+      margin-bottom: 28px;
+    }
+    &__item {
+      margin-bottom: 25px;
+      &__link {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        color: #666666;
+        transition: all 0.3s;
+        &:hover {
+          color: $mainColor;
+        }
+      }
+    }
+  }
+}
+
+.active__catalog {
+  display: flex;
+}
+
+// .menu__item-link .active__btn {
+//   padding: 47px 62px 47px 36px;
+//   background-color: rgb(15, 15, 15, 0.5);
+//   color: #fff;
+
+//   &::before {
+//     background-color: #fff;
+//     transform: rotate(90deg);
+//   }
+// }
