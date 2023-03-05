@@ -41,9 +41,16 @@ function headerCatalog() {
   const catalogBtnOpen = document.querySelector(".menu__item-link");
   const headerCatalog = document.querySelector(".header__catalog");
   const catalogBtnClose = document.querySelector(".header__catalog__close");
+  const burger = document.querySelector(".burger");
+  const menu = document.querySelector(".menu");
+  const body = document.querySelector("body");
 
   catalogBtnOpen.addEventListener("click", () => {
     if (!headerCatalog.classList.contains("active__catalog")) {
+      menu.classList.remove("active");
+      burger.classList.remove("active-burger");
+      body.classList.remove("locked");
+
       headerCatalog.style.animation = "fade 0.5s forwards";
       headerCatalog.classList.add("active__catalog");
     }

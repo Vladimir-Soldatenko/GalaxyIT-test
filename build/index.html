@@ -23,7 +23,9 @@
       <div class="navbar">
         <ul class="menu">
           <li class="menu__item">
-            <a href="#" class="menu__item-link" data-scroll>КАТАЛОГ</a>
+            <a href="#" class="menu__item-link" id="catalog" data-scroll
+              >КАТАЛОГ</a
+            >
           </li>
           <li class="menu__item">
             <a href="#" class="menu__item-link" data-scroll>SALE</a>
@@ -48,29 +50,29 @@
         </ul>
         <div class="navbar__logo">
           <a href="#" class="navbar__logo__link">
-            <svg class="navbar__logo__link__svg">
+            <svg class="navbar__logo__link__svg" id="logo">
               <use xlink:href="./img/sprite.svg#header-logo"></use>
             </svg>
           </a>
         </div>
         <div class="navbar__icons">
           <a href="#" class="navbar__icons-link" id="search">
-            <svg class="navbar__icons-link-svg">
+            <svg class="navbar__icons-link-svg" id="search-svg">
               <use xlink:href="./img/sprite.svg#search"></use>
             </svg>
           </a>
           <a href="#" class="navbar__icons-link">
-            <svg class="navbar__icons-link-svg">
+            <svg class="navbar__icons-link-svg" id="heart">
               <use xlink:href="./img/sprite.svg#heart"></use>
             </svg>
           </a>
           <a href="#" class="navbar__icons-link">
-            <svg class="navbar__icons-link-svg">
+            <svg class="navbar__icons-link-svg" id="shop">
               <use xlink:href="./img/sprite.svg#shop"></use>
             </svg>
           </a>
           <a href="#" class="navbar__icons-link modal__btn">
-            <svg class="navbar__icons-link-svg">
+            <svg class="navbar__icons-link-svg" id="login">
               <use xlink:href="./img/sprite.svg#login"></use>
             </svg>
           </a>
@@ -208,89 +210,86 @@
           <div class="active modal__body__link">ЛОГИН</div>
           <div class="modal__body__link">РЕГИСТРАЦИЯ</div>
         </div>
-        <div class="modal__container">
-          <div class="modal__content">
-            <form class="modal__form__login login__form">
-              <input
-                class="modal__form__login__input form__input"
-                type="text"
-                name="email"
-                placeholder="Введите email"
-              />
-              <span class="error"></span>
-              <input
-                class="modal__form__login__input form__input"
-                type="password"
-                name="password"
-                placeholder="Введите пароль"
-              />
-              <span class="error"></span>
-              <button
-                class="modal__form__login__button form__btn"
-                type="submit"
-              >
-                Войти
-              </button>
-              <a href="#" class="modal__form__login__forgot form__forgot__pass"
-                >Забыли пароль?</a
-              >
-            </form>
-          </div>
-          <div class="modal__container">
-            <div class="modal__content">
-              <form class="modal__form__register">
-                <input
-                  class="modal__form__register__input form__input"
-                  type="text"
-                  name="username"
-                  placeholder="Введите имя"
-                />
-                <span class="error"></span>
-                <input
-                  class="modal__form__register__input form__input"
-                  type="text"
-                  name="city"
-                  placeholder="Введите город"
-                />
-                <span class="error"></span>
-                <input
-                  class="modal__form__register__input form__input"
-                  type="tel"
-                  name="phone"
-                  placeholder="Введите телефон"
-                />
-                <span class="error"></span>
-                <input
-                  class="modal__form__register__input form__input"
-                  type="text"
-                  name="email"
-                  placeholder="Введите email"
-                />
-                <span class="error"></span>
-                <input
-                  class="modal__form__register__input form__input"
-                  type="password"
-                  name="password"
-                  placeholder="Введите пароль"
-                />
-                <span class="error"></span>
-                <input
-                  class="modal__form__register__input form__input"
-                  type="password"
-                  name="confirmPassword"
-                  placeholder="Подтвердите пароль"
-                />
-                <span class="error"></span>
-                <button
-                  class="modal__form__register__button form__btn"
-                  type="submit"
-                >
-                  ЗАРЕГИСТРИРОВАТЬСЯ
-                </button>
-              </form>
-            </div>
-          </div>
+        <!-- <div class="modal__container"> -->
+        <div class="modal__content">
+          <form class="modal__form__login login__form modal__form">
+            <input
+              class="modal__form__login__input form__input"
+              type="text"
+              name="email"
+              placeholder="Введите email"
+            />
+            <span class="error"></span>
+            <input
+              class="modal__form__login__input form__input"
+              type="password"
+              name="password"
+              placeholder="Введите пароль"
+            />
+            <span class="error"></span>
+            <button class="modal__form__login__button form__btn" type="submit">
+              Войти
+            </button>
+            <a href="#" class="modal__form__login__forgot form__forgot__pass"
+              >Забыли пароль?</a
+            >
+          </form>
         </div>
+        <!-- <div class="modal__container"> -->
+        <div class="modal__content">
+          <form class="modal__form__register modal__form">
+            <input
+              class="modal__form__register__input form__input"
+              type="text"
+              name="username"
+              placeholder="Введите имя"
+            />
+            <span class="error"></span>
+            <input
+              class="modal__form__register__input form__input"
+              type="text"
+              name="city"
+              placeholder="Введите город"
+            />
+            <span class="error"></span>
+            <input
+              class="modal__form__register__input form__input"
+              type="tel"
+              name="phone"
+              placeholder="Введите телефон"
+            />
+            <span class="error"></span>
+            <input
+              class="modal__form__register__input form__input"
+              type="text"
+              name="email"
+              placeholder="Введите email"
+            />
+            <span class="error"></span>
+            <input
+              class="modal__form__register__input form__input"
+              type="password"
+              name="password"
+              placeholder="Введите пароль"
+            />
+            <span class="error"></span>
+            <input
+              class="modal__form__register__input form__input"
+              type="password"
+              name="confirmPassword"
+              placeholder="Подтвердите пароль"
+            />
+            <span class="error"></span>
+            <button
+              class="modal__form__register__button form__btn"
+              type="submit"
+            >
+              ЗАРЕГИСТРИРОВАТЬСЯ
+            </button>
+          </form>
+        </div>
+        <!-- </div> -->
+        <!-- </div> -->
       </div>
     </div>
   </div>
@@ -2215,6 +2214,89 @@
           </div>
         </div>
       </div>
+      <div class="tabs__btn">
+        <a href="#" class="button tabs__btn__link">Посмотреть каталог</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      <!-- news -->
+      <section class="news">
+  <div class="container">
+    <div class="news__tabs">
+      <div class="news__tabs__header">
+        <div class="news__tabs__header-item active">Новости</div>
+        <div class="news__tabs__header-item">Отзывы</div>
+      </div>
+      <div class="news__tabs__content">
+        <div class="news__tabs__content__item">
+          <div class="news__tabs__content__item_background">
+            <h5 class="news__tabs__content__item__title">
+              Тренды мужской одежды 2020
+            </h5>
+            <p class="news__tabs__content__item__text">
+              Распродажа коллекций со скидками до 50%, доставка до вашего склада
+            </p>
+            <a href="#" class="news__tabs__content__item__btn">ЧИТАТЬ</a>
+          </div>
+        </div>
+        <div class="news__tabs__content__item">
+          <!-- <div class="news__tabs__content__item_background">
+            <h5 class="news__tabs__content__item__title">
+              Тренды мужской одежды 2020
+            </h5>
+            <p class="news__tabs__content__item__text">
+              Распродажа коллекций со скидками до 50%, доставка до вашего склада
+            </p>
+            <a href="#" class="news__tabs__content__item__btn">ЧИТАТЬ</a>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <div class="news__btn">
+      <a href="#" class="news__btn__link">БОЛЬШЕ НОВОСТЕЙ</a>
+    </div>
+  </div>
+</section>
+
+
+      <!-- subscribe -->
+      <section class="subscribe">
+  <div class="container">
+    <div class="subscribe__row">
+      <h5 class="subscribe__title">
+        Подпишись и следи за новыми поступлениями и акциями
+      </h5>
+      <div class="subscribe__socials">
+        <a href="#" class="subscribe__socials__link">
+          <svg class="subscribe__socials__link__svg">
+            <use xlink:href="./img/sprite.svg#viber"></use>
+          </svg>
+        </a>
+        <a href="#" class="subscribe__socials__link">
+          <svg class="subscribe__socials__link__svg">
+            <use xlink:href="./img/sprite.svg#telegram"></use>
+          </svg>
+        </a>
+      </div>
+      <form class="subscribe__phone">
+        <div class="subscribe__phone__input">
+          <svg class="subscribe__phone__input__svg">
+            <use xlink:href="./img/sprite.svg#phone"></use>
+          </svg>
+          <input
+            type="tel"
+            class="subscribe__phone__input__tel"
+            name="phone"
+            placeholder="+38 (___) ___-__-__"
+          />
+        </div>
+        <div class="subscribe__phone__btn">
+          <a href="#" class="subscribe__phone__btn__link">ПОДПИСАТЬСЯ</a>
+        </div>
+      </form>
     </div>
   </div>
 </section>
@@ -2222,7 +2304,144 @@
     </main>
 
     <!-- Footer -->
-    
+    <footer>
+  <div class="footer__background">
+    <div class="container">
+      <div class="footer">
+        <div class="footer__logo">
+          <img
+            src="./img/footer-logo.png"
+            alt="logo"
+            class="footer__logo__img"
+          />
+        </div>
+        <div class="footer__container">
+          <div class="footer__about">
+            <h5 class="footer__about__title">О КОМПАНИИ</h5>
+            <div class="footer__about__row">
+              <ul class="footer__about__menu">
+                <li class="footer__about__menu__item">
+                  <a href="#" class="footer__about__menu__item__link"
+                    >Доставка и оплата одежды</a
+                  >
+                </li>
+                <li class="footer__about__menu__item">
+                  <a href="#" class="footer__about__menu__item__link"
+                    >Политика конфиденциальности</a
+                  >
+                </li>
+              </ul>
+              <ul class="footer__about__menu">
+                <li class="footer__about__menu__item">
+                  <a href="#" class="footer__about__menu__item__link">Опт</a>
+                </li>
+                <li class="footer__about__menu__item">
+                  <a href="#" class="footer__about__menu__item__link">О Нас</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__about">
+            <h5 class="footer__about__title">ЗАКАЗЧИКАМ</h5>
+            <div class="footer__about__row">
+              <ul class="footer__about__menu">
+                <li class="footer__about__menu__item">
+                  <a href="#" class="footer__about__menu__item__link"
+                    >Личный кабинет</a
+                  >
+                </li>
+                <li class="footer__about__menu__item">
+                  <a href="#" class="footer__about__menu__item__link"
+                    >История заказов</a
+                  >
+                </li>
+                <li class="footer__about__menu__item">
+                  <a href="#" class="footer__about__menu__item__link"
+                    >Закладки</a
+                  >
+                </li>
+              </ul>
+              <ul class="footer__about__menu">
+                <li class="footer__about__menu__item">
+                  <a href="#" class="footer__about__menu__item__link"
+                    >Возврат товара</a
+                  >
+                </li>
+                <li class="footer__about__menu__item">
+                  <a href="#" class="footer__about__menu__item__link"
+                    >Обратная связь</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer__info">
+          <span class="footer__info__phone">+38 068 346 04 75</span>
+          <span class="footer__info__phone">+38 066 400 38 14</span>
+          <div class="footer__info__socials">
+            <div class="footer__info__socials__left">
+              <a href="#" class="footer__info__socials__link">
+                <svg class="footer__info__socials__link__svg">
+                  <use xlink:href="./img/sprite.svg#footer-viber"></use>
+                </svg>
+              </a>
+              <a href="#" class="footer__info__socials__link">
+                <svg
+                  class="footer__info__socials__link__svg footer__info__socials__link__svg_telegram"
+                >
+                  <use xlink:href="./img/sprite.svg#footer-telegram"></use>
+                </svg>
+              </a>
+              <a href="#" class="footer__info__socials__link">
+                <svg class="footer__info__socials__link__svg">
+                  <use xlink:href="./img/sprite.svg#footer-watsup"></use>
+                </svg>
+              </a>
+            </div>
+            <span class="footer__info__socials__line"></span>
+            <div class="footer__info__socials__right">
+              <a href="#" class="footer__info__socials__link">
+                <svg
+                  class="footer__info__socials__link__svg footer__info__socials__link__svg_mail"
+                >
+                  <use xlink:href="./img/sprite.svg#mail"></use>
+                </svg>
+              </a>
+              <a href="#" class="footer__info__socials__link">
+                <svg class="footer__info__socials__link__svg">
+                  <use xlink:href="./img/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+              <a href="#" class="footer__info__socials__link">
+                <svg class="footer__info__socials__link__svg">
+                  <use xlink:href="./img/sprite.svg#instagram"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__copyright">
+    <div class="container">
+      <span class="footer__copyright__left">
+        © 2020 HECTOR Все права защищены
+      </span>
+      <div class="footer__copyright__links">
+        <a href="#">Политика конфиденциальности</a>
+        <span>|</span>
+        <a href="#">Условия продажи </a>
+      </div>
+      <div class="footer__copyright__design">
+        <span>Design and development</span>
+        <img src="./img/galaxy.png" alt="galaxyIt" />
+      </div>
+    </div>
+  </div>
+</footer>
+
   </body>
 
   <script src="./js/scripts.min.js"></script>

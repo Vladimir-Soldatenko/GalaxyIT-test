@@ -202,4 +202,14 @@
       margin-top: 60px;
     }
   }
+  &__btn {
+    width: 370px;
+    margin: 0 auto;
+    @media (max-width: $breakpoint1024) {
+      width: 290px;
+    }
+    &__link {
+      color: $mainColor;
+    }
+  }
 }

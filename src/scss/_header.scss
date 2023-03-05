@@ -2,6 +2,29 @@
 header .container {
   position: relative;
 }
+// svg
+#logo {
+  width: 122px;
+  height: 104px;
+  @media (max-width: $burgerBreakpoint) {
+    width: 50px;
+    height: 42px;
+  }
+}
+
+#search-svg,
+#heart,
+#shop,
+#login {
+  width: 30px;
+  height: 30px;
+  @media (max-width: $burgerBreakpoint) {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+// --------------------
 .navbar {
   position: relative;
   display: flex;
@@ -19,13 +42,22 @@ header .container {
     }
     &__item {
       margin-right: 26px;
+      @media screen and (max-width: $burgerBreakpoint) {
+        margin-right: 0;
+      }
 
       &:last-of-type {
         margin-right: 35px;
+        @media screen and (max-width: $burgerBreakpoint) {
+          margin-right: 0;
+        }
       }
       &:first-of-type::after {
         content: url("../img/header_arrow.svg");
         margin-left: 7px;
+        @media screen and (max-width: $burgerBreakpoint) {
+          display: none;
+        }
       }
       &-link {
         font-size: 14px;
@@ -44,6 +76,9 @@ header .container {
   &__logo {
     padding-top: 33px;
     flex: 1 1 auto;
+    @media screen and (max-width: $burgerBreakpoint) {
+      padding-top: 5px;
+    }
     &__link {
       &__svg {
         width: 122px;
@@ -191,8 +226,11 @@ header .container {
   z-index: 20;
   flex-direction: column;
   background-color: #fff;
-  // animation: fade 0.3s;
   display: none;
+  @media screen and (max-width: $burgerBreakpoint) {
+    top: -50px;
+  }
+
   &__close {
     padding: 47px 62px 47px 36px;
     background-color: rgb(15, 15, 15, 0.5);
@@ -205,6 +243,23 @@ header .container {
     line-height: 22px;
     letter-spacing: 0.07em;
     cursor: pointer;
+    @media screen and (max-width: $burgerBreakpoint) {
+      padding: 15px 62px 15px 36px;
+      font-size: 14px;
+      line-height: 18px;
+      width: 170px;
+    }
+    @media screen and (max-width: $breakpoint768) {
+      margin: 0 0 25px 0;
+      font-size: 12px;
+      line-height: 16px;
+      width: 150px;
+    }
+    @media screen and (max-width: 600px) {
+      font-size: 10px;
+      width: 135px;
+    }
+
     &::after {
       content: url("../img/arrowUp.svg");
       position: absolute;
@@ -212,6 +267,16 @@ header .container {
       transform: translateY(-50%);
       right: 25px;
       color: #fff;
+      width: 21px;
+      height: 21px;
+      @media screen and (max-width: $burgerBreakpoint) {
+        width: 15px;
+        height: 19px;
+      }
+      @media screen and (max-width: $breakpoint768) {
+        width: 10px;
+        height: 18px;
+      }
     }
   }
   &__categ {
@@ -219,12 +284,30 @@ header .container {
     align-items: center;
     justify-content: space-between;
     max-width: 1020px;
+    @media (max-width: $breakpoint480) {
+      flex-direction: column;
+      align-items: center;
+    }
     &__btn {
       padding: 17px 57px;
       font-weight: 500;
       font-size: 20px;
       line-height: 24px;
       letter-spacing: 0.07em;
+      @media screen and (max-width: $burgerBreakpoint) {
+        padding: 12px 30px;
+      }
+      @media screen and (max-width: $breakpoint768) {
+        padding: 10px 15px;
+        font-size: 12px;
+      }
+      @media (max-width: $breakpoint480) {
+        width: 85%;
+        margin-bottom: 15px;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
     }
   }
   .border {
@@ -232,31 +315,69 @@ header .container {
     background-color: #878787;
     height: 1px;
     margin: 41px 0 31px 0;
+    @media screen and (max-width: $burgerBreakpoint) {
+      margin: 15px 0;
+    }
   }
   &__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     max-width: 860px;
+    @media (max-width: $breakpoint480) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
   &__menu {
     display: flex;
     flex-direction: column;
+    @media (max-width: $breakpoint480) {
+      text-align: center;
+      width: 250px;
+    }
+
     &__title {
       font-weight: 700;
       font-size: 24px;
       line-height: 29px;
       color: #000000;
       margin-bottom: 28px;
+      @media screen and (max-width: $burgerBreakpoint) {
+        font-size: 20px;
+        line-height: 24px;
+      }
+      @media screen and (max-width: $breakpoint768) {
+        font-size: 18px;
+        line-height: 22px;
+      }
+      @media screen and (max-width: 600px) {
+        font-size: 16px;
+        line-height: 18px;
+      }
     }
     &__item {
       margin-bottom: 25px;
+      @media screen and (max-width: $burgerBreakpoint) {
+        margin-bottom: 15px;
+      }
       &__link {
         font-weight: 400;
         font-size: 18px;
         line-height: 22px;
         color: #666666;
         transition: all 0.3s;
+        @media screen and (max-width: $burgerBreakpoint) {
+          font-size: 16px;
+          line-height: 20px;
+        }
+        @media screen and (max-width: $breakpoint768) {
+          font-size: 14px;
+        }
+        @media screen and (max-width: 600px) {
+          font-size: 12px;
+        }
+
         &:hover {
           color: $mainColor;
         }
@@ -268,14 +389,3 @@ header .container {
 .active__catalog {
   display: flex;
 }
-
-// .menu__item-link .active__btn {
-//   padding: 47px 62px 47px 36px;
-//   background-color: rgb(15, 15, 15, 0.5);
-//   color: #fff;
-
-//   &::before {
-//     background-color: #fff;
-//     transform: rotate(90deg);
-//   }
-// }

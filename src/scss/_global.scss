@@ -52,7 +52,6 @@ body {
 }
 
 .form__input {
-  width: 375px;
   height: 70px;
   outline: none;
   border-bottom: 3px solid #0f0f0f;
@@ -60,6 +59,12 @@ body {
   font-size: 18px;
   line-height: 22px;
   color: #0f0f0f;
+  @media (max-width: $breakpoint1240) {
+    font-size: 16px;
+  }
+  @media (max-width: $breakpoint768) {
+    font-size: 14px;
+  }
   &::placeholder {
     font-weight: 700;
     font-size: 18px;
@@ -67,11 +72,19 @@ body {
     color: #0f0f0f;
     letter-spacing: 0.07em;
     font-family: $fontMain;
+    @media (max-width: $breakpoint1240) {
+      font-size: 16px;
+    }
+    @media (max-width: $breakpoint768) {
+      font-size: 14px;
+    }
   }
 }
 
 .form__btn {
-  padding: 24px 150px;
+  width: 100%;
+  // padding: 24px 150px;
+  padding: 24px 0px;
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;

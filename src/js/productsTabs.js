@@ -44,3 +44,9 @@ function tabs(
 // ЧЕТВЕРТЫЙ аргумент - класс активности, который будет добавлятся для таба, который сейчас активен.
 tabs(".tabs__header", ".tabs__header-item", ".tabs__content-item", "active");
 tabs(".modal__tabs__header", ".modal__body__link", ".modal__content", "active");
+tabs(
+  ".news__tabs__header",
+  ".news__tabs__header-item",
+  ".news__tabs__content__item",
+  "active"
+);

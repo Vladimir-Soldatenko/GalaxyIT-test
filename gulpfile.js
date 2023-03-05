@@ -96,7 +96,7 @@ function img() {
 
 // JavaScript
 function js() {
-  return src([path.src.js])
+  return src(["node_modules/imask/dist/imask.js", path.src.js])
     .pipe(fileinclude())
     .pipe(concat("scripts.js")) // обьединение скрипта с библиотеками
     .pipe(dest(path.build.js))
